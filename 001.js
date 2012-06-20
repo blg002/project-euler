@@ -10,7 +10,7 @@ function euler001() {
   while (n--) {
     if (n % 3 === 0 || n % 5 === 0) {
       sum += n
-      console.log( 'added ' + n + ' to ' + sum );
+      // console.log( 'added ' + n + ' to ' + sum );
     }
   }
   
