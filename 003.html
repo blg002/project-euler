@@ -1,38 +1,27 @@
 <script>
 // The prime factors of 13195 are 5, 7, 13 and 29.
-
 // What is the largest prime factor of the number 600851475143 ?
+
+// mathsisfun.com/prime-factorization.html
 
 
 function euler003() {
-  var num = 13195;
-  var arr = [];
+  var num = 90;
+  var i = 2;
 
-  function isPrime(n) {
-    var sqroot = Math.sqrt(n);
-
-    if (n % 2 === 0 || n % 2 === 0) return false
-    for (var i = 3; i < sqroot; i+=2) {
-      if (n % i === 0) {
-        return false
-      }
+  while (num > i) {
+    if (num % i === 0) {
+      num = num / i;
+      i = 1
+      console.log(num)
     }
 
-    return true
+    i++
   }
 
-  for (var i = 2; i < num; i++) {
-    if (num % i === 0 && isPrime(i)) {
-      arr.push(i);
-    }
-  }
-
-  console.log(arr)
-  return arr;
+  return i
 };
 
-
 document.write( euler003() );
-
 
 </script>
